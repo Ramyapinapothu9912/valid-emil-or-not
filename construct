@@ -1,0 +1,43 @@
+package oops;
+
+public class Custamar {
+	private String nameof_custamar;
+	private int idof_custamar;
+	private String gmail_custamar;
+	private String passward_custamar;
+	
+	public void setNameof_Custamar(String name)
+	{
+		nameof_custamar=name;
+	}
+	public String getNameof_Custamar()
+	{
+		return nameof_custamar;
+	}
+	public void setIdof_Custamar(int id)
+	{
+		idof_custamar=id;
+	}
+	public int getIdof_Custamar()
+	{
+		return idof_custamar;
+	}
+	public void setGmail_Custamar(String gmail)
+	{
+		gmail_custamar=gmail;
+	}
+	public String getGmail_Custamar()
+	{
+		return gmail_custamar;
+	}
+	public void setPassward_Custamar(String passward)
+	{
+		passward_custamar=passward;
+	}
+	public String getPassward_Custamar()
+	{
+		return passward_custamar;
+	}
+
+
+}
