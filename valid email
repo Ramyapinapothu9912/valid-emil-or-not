@@ -1,0 +1,49 @@
+package oops;
+
+import java.util.Scanner;
+
+public class detailsCustamar{
+    public static void main(String[] args) {
+        Custamar custamar = new Custamar();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Details of the Customer:");
+        System.out.println("Enter the name of the Customer:");
+        String name = sc.next();
+        custamar.setNameof_Custamar(name);
+
+        System.out.println("Enter the ID of the Customer:");
+        int id = sc.nextInt();
+        custamar.setIdof_Custamar(id);
+
+        boolean isValidGmail = false;
+
+        while (!isValidGmail) {
+            System.out.println("Enter the Gmail of the Customer:");
+            String gmail = sc.next();
+            custamar.setGmail_Custamar(gmail);
+
+            isValidGmail = isValidGmail(custamar.getGmail_Custamar());
+
+            if (!isValidGmail) {
+                System.out.println("Invalid Gmail. Please enter a valid Gmail.");
+            }
+        }
+
+        System.out.println("Enter the password of the Customer:");
+        String password = sc.next();
+        custamar.setPassward_Custamar(password);
+
+        // Print customer details
+        System.out.println("Name of the Customer: " + custamar.getNameof_Custamar());
+        System.out.println("ID of the Customer: " + custamar.getIdof_Custamar());
+        System.out.println("Gmail of the Customer: " + custamar.getGmail_Custamar());
+        System.out.println("Password of the Customer: " + custamar.getPassward_Custamar());
+    }
+
+    private static boolean isValidGmail(String email) {
+        //this is the pattern using the gmail\\
+        String valid_gmail="^[a-zA-Z0-9_.+-]+@gmail\\.com$";
+        return email.matches(valid_gmail);
+    }
+}
